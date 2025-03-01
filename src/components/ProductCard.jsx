@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   return (
     <motion.div
       whileHover={{ y: -5 }}
-      className="group relative bg-white rounded-lg shadow-sm overflow-hidden"
+      className="group relative bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
     >
       <Link to={`/product/${product.id}`}>
         <div className="aspect-w-3 aspect-h-4 group-hover:opacity-75">
@@ -21,9 +21,9 @@ const ProductCard = ({ product }) => {
       </Link>
       <div className="p-4">
         <Link to={`/product/${product.id}`}>
-          <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
+          <h3 className="text-sm font-medium text-dark-100">{product.name}</h3>
         </Link>
-        <p className="mt-1 text-lg font-semibold text-primary-600">${product.price}</p>
+        <p className="mt-1 text-lg font-semibold text-primary-500">${product.price}</p>
         <button
           onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
           className="mt-4 w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
